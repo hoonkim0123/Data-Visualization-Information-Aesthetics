@@ -7,6 +7,9 @@ An interactive visualization that explores Netflix franchise viewing and season-
 
 - https://hoonkim0123.github.io/Data-Visualization-Information-Aesthetics/
 
+![Preview screenshot](preview/PreviewImg.png)
+
+
 
 ## 📖 About
 
