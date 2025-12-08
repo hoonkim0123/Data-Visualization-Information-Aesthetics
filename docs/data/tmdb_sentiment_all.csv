@@ -1,0 +1,878 @@
+franchise,season,avg_score,n_episodes
+A Discovery of Witches,1,-0.139,8
+A Discovery of Witches,2,-0.101,10
+A Discovery of Witches,3,-0.093,7
+Adolescence,1,0.061,13
+Adolescence,2,0.052,13
+Alexa & Katie,1,0.005,13
+Alexa & Katie,2,0.016,10
+Alexa & Katie,3,0.031,8
+Alexa & Katie,4,0.013,8
+Alice in Borderland,1,0.018,8
+Alice in Borderland,2,-0.006,8
+Alice in Borderland,3,0.039,6
+All American,1,-0.024,8
+All American,2,0.035,10
+All American,3,0.006,12
+All American,4,-0.008,12
+All American,5,0.015,12
+All American,6,-0.023,12
+All American,7,-0.023,13
+All American,8,-0.026,13
+All American,9,0.028,13
+All American,10,-0.001,13
+All American,11,0.003,13
+All American,12,-0.027,13
+All American,13,-0.017,13
+All American,14,-0.002,12
+All American,15,0.013,13
+All American,16,-0.017,13
+All American,17,0.007,13
+All American,18,-0.004,13
+All American,19,0.003,13
+All American,20,-0.007,16
+All American,21,-0.008,16
+All American,22,-0.004,16
+All American,23,0.009,15
+All American,24,-0.033,15
+Alpha Males,1,0.024,10
+Alpha Males,2,0.013,10
+Alpha Males,3,0.026,10
+ALVINNN!!! And the Chipmunks,3,-0.031,52
+ALVINNN!!! And the Chipmunks,4,0.007,52
+ALVINNN!!! And the Chipmunks,5,0.002,52
+American Manhunt,1,-0.106,3
+American Murder,1,-0.137,12
+American Murder,2,-0.103,13
+American Murder,3,-0.152,13
+American Murder,4,-0.094,13
+American Murder,5,-0.021,12
+American Murder,6,-0.038,10
+American Murder,7,0.04,11
+American Murder,8,-0.06,10
+American Murder,9,-0.136,9
+American Murder,10,-0.069,10
+American Murder,11,-0.224,10
+American Murder,12,0.002,9
+American Primeval,1,-0.052,6
+Animal Kingdom,1,-0.043,10
+Animal Kingdom,2,-0.007,13
+Animal Kingdom,3,0.021,13
+Animal Kingdom,4,-0.005,13
+Animal Kingdom,5,-0.032,13
+Animal Kingdom,6,0.022,13
+Apple Cider Vinegar,1,-0.006,6
+Arcane,1,-0.051,9
+Arcane,2,-0.17,9
+Asterix & Obelix,1,-0.027,5
+Attack on Titan,1,-0.003,25
+Attack on Titan,2,-0.044,12
+Attack on Titan,3,-0.018,22
+Attack on Titan,4,0.003,28
+Bad Influence,1,0,7
+Bandidos,1,0.02,10
+Barbie Dreamhouse Adventures,1,0.046,8
+Barbie Dreamhouse Adventures,2,0.033,9
+Barbie Dreamhouse Adventures,3,0.174,9
+Beauty in Black,1,-0.036,16
+Beauty in Black,2,-0.002,8
+Bebefinn,1,0.011,50
+Bebefinn,2,0.061,3
+Bet,1,-0.037,10
+Bet,2,0.006,10
+Bet,3,0.032,10
+Bet,4,-0.091,10
+Bet,5,0.015,10
+Bet,6,0.005,13
+Better Call Saul,1,-0.037,10
+Better Call Saul,2,0.006,10
+Better Call Saul,3,0.032,10
+Better Call Saul,4,-0.091,10
+Better Call Saul,5,0.015,10
+Better Call Saul,6,0.005,13
+Big Mouth,1,0.015,10
+Big Mouth,2,-0.01,10
+Big Mouth,3,0.047,11
+Big Mouth,4,-0.033,10
+Big Mouth,5,0.069,10
+Big Mouth,6,0.024,10
+Big Mouth,7,-0.006,10
+Big Mouth,8,-0.098,10
+Black Doves,1,-0.16,6
+Black Mirror,1,0.033,3
+Black Mirror,2,0.067,3
+Black Mirror,3,-0.13,6
+Black Mirror,4,-0.102,6
+Black Mirror,5,-0.058,3
+Black Mirror,6,-0.1,5
+Black Mirror,7,-0.006,6
+Booba,1,0.017,39
+Booba,2,0.162,26
+Booba,3,0.071,26
+Booba,5,0.155,26
+Breaking Bad,1,-0.031,7
+Breaking Bad,2,-0.047,13
+Breaking Bad,3,-0.066,13
+Breaking Bad,4,0.013,13
+Breaking Bad,5,-0.008,16
+Bridgerton,1,-0.064,8
+Bridgerton,2,0.041,8
+Bridgerton,3,-0.028,8
+Brooklyn Nine-Nine,1,-0.042,22
+Brooklyn Nine-Nine,2,0.008,23
+Brooklyn Nine-Nine,3,-0.036,23
+Brooklyn Nine-Nine,4,-0.035,22
+Brooklyn Nine-Nine,5,-0.098,22
+Brooklyn Nine-Nine,6,-0.052,18
+Brooklyn Nine-Nine,7,-0.01,13
+Brooklyn Nine-Nine,8,0.095,9
+Cassandra,1,0.005,6
+Castlevania,1,-0.105,4
+Castlevania,2,-0.113,8
+Castlevania,3,0.013,10
+Castlevania,4,0.016,10
+Caught,1,0,40
+Chip and Potato,1,0.079,40
+Cobra Kai,1,0.036,10
+Cobra Kai,2,0.044,10
+Cobra Kai,3,0.024,10
+Cobra Kai,4,0,10
+Cobra Kai,5,-0.057,10
+Cobra Kai,6,-0.05,15
+CoComelon,1,0,7
+CoComelon,2,0,3
+CoComelon,3,0,3
+CoComelon,4,0,3
+CoComelon,6,0,1
+CoComelon,7,0.083,3
+CoComelon,8,0.462,1
+CoComelon,9,0,1
+CoComelon,11,0,1
+CoComelon Lane,1,0.116,9
+CoComelon Lane,2,0.091,5
+CoComelon Lane,4,-0.04,3
+Cold Case,1,-0.279,23
+Cold Case,2,-0.246,23
+Cold Case,3,-0.204,23
+Cold Case,4,-0.289,24
+Cold Case,5,-0.192,18
+Cold Case,6,-0.303,23
+Cold Case,7,-0.289,22
+Criminal Code,1,-0.076,8
+Criminal Code,2,-0.065,8
+Demon Slayer,1,-0.083,26
+Demon Slayer,2,-0.061,7
+Demon Slayer,3,-0.049,11
+Demon Slayer,4,-0.036,11
+Demon Slayer,5,0,8
+Departure,1,-0.076,6
+Departure,2,-0.058,6
+Departure,3,-0.123,6
+Dept. Q,1,-0.079,9
+Devil May Cry,1,0,12
+Dexter,1,-0.253,12
+Dexter,2,-0.13,12
+Dexter,3,-0.06,12
+Dexter,4,-0.15,12
+Dexter,5,-0.196,12
+Dexter,6,-0.084,12
+Dexter,7,-0.156,12
+Dexter,8,-0.099,12
+Dog Days Out,1,-0.025,8
+Dragons,1,0.001,39
+Dragons,2,-0.02,35
+Dragons,3,0.007,33
+Dragons,4,-0.035,32
+Dragons,5,-0.003,26
+Dragons,6,-0.033,29
+Dragons,7,0.033,25
+Dragons,8,-0.021,34
+Dragons,9,-0.014,38
+Emily in Paris,1,-0.017,10
+Emily in Paris,2,0.081,10
+Emily in Paris,3,0.082,10
+Emily in Paris,4,0.076,10
+Envious,1,0.098,12
+Envious,2,0.064,11
+Fake Profile,1,-0.07,10
+Fake Profile,2,-0.078,10
+Family Reunion,1,0.01,19
+Family Reunion,2,0,15
+Family Reunion,3,0.061,10
+FOREVER,1,-0.214,22
+Formula 1,1,0.041,10
+Formula 1,2,0.026,10
+Formula 1,3,-0.007,10
+Formula 1,4,0.002,10
+Formula 1,5,0.065,10
+Formula 1,6,0.038,10
+Formula 1,7,0.065,10
+Fred and Rose West,1,-0.098,3
+Free Rein,1,0.042,10
+Free Rein,2,-0.039,10
+Free Rein,3,0.03,10
+FUBAR,1,0,8
+FUBAR,2,-0.055,8
+Gabby's Dollhouse,1,0.027,10
+Gabby's Dollhouse,2,0.031,8
+Gabby's Dollhouse,3,0.108,7
+Gabby's Dollhouse,4,0.084,8
+Gabby's Dollhouse,5,0.058,6
+Gabby's Dollhouse,6,0.144,6
+Gabby's Dollhouse,7,0.027,6
+Gabby's Dollhouse,8,0.041,7
+Gabby's Dollhouse,9,0.051,6
+Gabby's Dollhouse,10,0.068,6
+Gabby's Dollhouse,11,0.114,6
+Gilmore Girls,1,0.012,21
+Gilmore Girls,2,0.009,22
+Gilmore Girls,3,0.016,22
+Gilmore Girls,4,0.071,22
+Gilmore Girls,5,0.073,22
+Gilmore Girls,6,0.063,22
+Gilmore Girls,7,0.023,22
+Ginny & Georgia,1,0.134,10
+Ginny & Georgia,2,0.008,10
+Ginny & Georgia,3,-0.115,10
+Go! Go! Cory Carson,1,0.112,7
+Go! Go! Cory Carson,2,0.09,7
+Go! Go! Cory Carson,3,0.045,7
+Go! Go! Cory Carson,4,0.138,7
+Go! Go! Cory Carson,5,0.108,17
+Go! Go! Cory Carson,6,0.1,18
+Gone Girls,1,-0.415,3
+Grizzy and the Lemmings,1,0.009,78
+Grizzy and the Lemmings,2,0.008,78
+Grizzy and the Lemmings,3,-0.003,78
+Grizzy and the Lemmings,4,-0.017,78
+Halo,1,-0.033,9
+Halo,2,-0.126,8
+High Tides,1,-0.015,10
+Hot Wheels Let's Race,1,-0.023,10
+Hot Wheels Let's Race,2,0.036,5
+Hot Wheels Let's Race,3,0.068,5
+House, M.D.,1,-0.039,22
+House, M.D.,2,-0.115,24
+House, M.D.,3,-0.023,24
+House, M.D.,4,-0.074,16
+House, M.D.,5,-0.048,24
+House, M.D.,6,-0.026,21
+House, M.D.,7,-0.046,23
+House, M.D.,8,-0.058,22
+How I Met Your Mother,1,0.121,22
+How I Met Your Mother,2,0.007,22
+How I Met Your Mother,3,0.041,20
+How I Met Your Mother,4,0.012,24
+How I Met Your Mother,5,0.02,24
+How I Met Your Mother,6,0.017,24
+How I Met Your Mother,7,0.052,24
+How I Met Your Mother,8,0.043,24
+How I Met Your Mother,9,0.039,24
+How to Sell Drugs Online (Fast),1,0.053,6
+How to Sell Drugs Online (Fast),2,0.014,6
+How to Sell Drugs Online (Fast),3,0.022,6
+How to Sell Drugs Online (Fast),4,0.088,6
+Hunter X Hunter (2011),1,-0.116,62
+Hunter X Hunter (2011),2,-0.108,74
+Hunter X Hunter (2011),3,-0.049,12
+I AM A KILLER,1,-0.397,10
+I AM A KILLER,2,-0.467,10
+I AM A KILLER,3,-0.347,6
+I AM A KILLER,4,-0.303,6
+I AM A KILLER,5,-0.292,6
+I AM A KILLER,6,-0.319,6
+Jerry Springer,1,0.014,20
+Jerry Springer,2,0.012,6
+Jerry Springer,3,-0.006,5
+Jerry Springer,5,0.066,8
+Jerry Springer,6,0.036,10
+Jerry Springer,7,0.056,29
+Jerry Springer,11,0.041,15
+Jerry Springer,12,0.071,2
+Jerry Springer,20,0.072,98
+Jerry Springer,22,0,1
+Jurassic World,1,0.029,10
+Jurassic World,2,0.026,10
+Jurassic World,3,0.035,10
+Jurassic World Camp Cretaceous,1,-0.086,8
+Jurassic World Camp Cretaceous,2,0.088,8
+Jurassic World Camp Cretaceous,3,-0.005,10
+Jurassic World Camp Cretaceous,4,0.004,11
+Jurassic World Camp Cretaceous,5,0.123,12
+Just One Look,1,-0.074,6
+La Palma,1,0.167,4
+LEGO Ninjago,1,0.019,13
+LEGO Ninjago,2,-0.02,13
+LEGO Ninjago,3,0.02,8
+LEGO Ninjago,4,0.077,10
+LEGO Ninjago,5,-0.064,10
+LEGO Ninjago,6,0.044,10
+LEGO Ninjago,7,0.047,10
+LEGO Ninjago,8,-0.086,10
+LEGO Ninjago,9,-0.029,10
+LEGO Ninjago,10,0.033,4
+LEGO Ninjago,11,-0.005,30
+LEGO Ninjago,12,-0.043,16
+LEGO Ninjago,13,0.016,16
+LEGO Ninjago,14,0.004,4
+LEGO Ninjago,15,-0.011,16
+LEGO Ninjago,16,0.004,30
+Lost (2004),1,-0.057,24
+Lost (2004),2,-0.01,24
+Lost (2004),3,-0.012,23
+Lost (2004),4,-0.044,13
+Lost (2004),5,0,17
+Lost (2004),6,-0.026,17
+Love Is Blind,1,0.023,14
+Love Is Blind,2,0.102,14
+Love Is Blind,3,0.093,15
+Love Is Blind,4,0.088,16
+Love Is Blind,5,0.083,11
+Love Is Blind,6,0.062,13
+Love Is Blind,7,0.022,13
+Love Is Blind,8,0.089,14
+Love Is Blind,9,0.062,13
+Love on the Spectrum,1,0.059,6
+Love on the Spectrum,2,0.086,7
+Love on the Spectrum,3,0.021,7
+Love, Death & Robots,1,-0.057,18
+Love, Death & Robots,2,-0.423,8
+Love, Death & Robots,3,-0.178,9
+Love, Death & Robots,4,-0.023,10
+Lucifer,1,-0.155,13
+Lucifer,2,-0.193,18
+Lucifer,3,-0.138,26
+Lucifer,4,-0.208,10
+Lucifer,5,-0.164,16
+Lucifer,6,-0.093,10
+Manifest,1,-0.058,16
+Manifest,2,-0.085,13
+Manifest,3,0.03,13
+Manifest,4,-0.073,20
+Masha and the Bear,1,0.03,26
+Masha and the Bear,2,0.037,26
+Masha and the Bear,3,0.066,26
+Masha and the Bear,4,0.041,13
+Masha and the Bear,5,0.046,26
+Medusa,1,0.037,11
+Mercy For None,1,-0.154,7
+Mighty Little Bheem,1,0.059,21
+Mighty Little Bheem,2,0.01,28
+Mighty Little Bheem,3,-0.034,15
+Miraculous,1,-0.123,26
+Miraculous,2,-0.017,25
+Miraculous,3,-0.022,26
+Miraculous,4,0.06,26
+Miraculous,5,-0.054,26
+Miraculous,6,0.005,26
+Mo,1,-0.102,8
+Money Heist,1,0.003,15
+Money Heist,2,0.037,16
+Money Heist,3,0.009,10
+Ms. Rachel,1,0.161,4
+My Little Pony,1,0.08,26
+My Little Pony,2,0.038,26
+My Little Pony,3,0.072,13
+My Little Pony,4,0.04,26
+My Little Pony,5,0.043,26
+My Little Pony,6,0.076,26
+My Little Pony,7,0.056,26
+My Little Pony,8,0.089,26
+My Little Pony,9,0.087,26
+Narcos,1,-0.018,10
+Narcos,2,0.007,10
+Narcos,3,-0.086,10
+Naruto,1,-0.017,52
+Naruto,2,0.004,52
+Naruto,3,-0.018,54
+Naruto,4,0.008,62
+NCIS,1,-0.245,23
+NCIS,2,-0.16,23
+NCIS,3,-0.134,24
+NCIS,4,-0.204,24
+NCIS,5,-0.297,19
+NCIS,6,-0.28,25
+NCIS,7,-0.232,24
+NCIS,8,-0.288,24
+NCIS,9,-0.216,24
+NCIS,10,-0.11,24
+NCIS,11,-0.172,24
+NCIS,12,-0.192,24
+NCIS,13,-0.177,24
+NCIS,14,-0.201,24
+NCIS,15,-0.112,24
+NCIS,16,-0.166,24
+NCIS,17,-0.213,20
+NCIS,18,-0.252,16
+NCIS,19,-0.223,21
+NCIS,20,-0.226,22
+NCIS,21,-0.115,10
+NCIS,22,-0.169,20
+NCIS,23,-0.099,9
+Never Have I Ever,1,0.118,10
+Never Have I Ever,2,0.053,10
+Never Have I Ever,3,-0.006,10
+Never Have I Ever,4,0.115,10
+ONE PIECE,1,-0.054,61
+ONE PIECE,2,0.028,16
+ONE PIECE,3,0,14
+ONE PIECE,4,-0.034,39
+ONE PIECE,5,0.017,13
+ONE PIECE,6,-0.01,52
+ONE PIECE,7,-0.001,33
+ONE PIECE,8,-0.012,35
+ONE PIECE,9,-0.017,73
+ONE PIECE,10,-0.032,45
+ONE PIECE,11,0.038,26
+ONE PIECE,12,-0.005,14
+ONE PIECE,13,-0.02,101
+ONE PIECE,14,-0.018,58
+ONE PIECE,15,-0.032,62
+ONE PIECE,16,0.013,50
+ONE PIECE,17,0.028,56
+ONE PIECE,18,-0.007,55
+ONE PIECE,19,0.005,74
+ONE PIECE,20,0.052,14
+ONE PIECE,21,-0.018,197
+ONE PIECE,22,0.003,67
+Orange Is the New Black,1,-0.029,13
+Orange Is the New Black,2,-0.003,13
+Orange Is the New Black,3,0.015,13
+Orange Is the New Black,4,-0.016,13
+Orange Is the New Black,5,-0.051,13
+Orange Is the New Black,6,-0.036,13
+Orange Is the New Black,7,0.096,13
+Outer Banks,1,0.022,10
+Outer Banks,2,0.033,10
+Outer Banks,3,0.101,10
+Outer Banks,4,-0.019,10
+Outlander,1,0.007,16
+Outlander,2,-0.012,13
+Outlander,3,0.049,13
+Outlander,4,-0.011,13
+Outlander,5,-0.174,12
+Outlander,6,-0.157,8
+Outlander,7,0.02,16
+PAW Patrol,1,0.068,47
+PAW Patrol,2,0.027,47
+PAW Patrol,3,0.005,50
+PAW Patrol,4,-0.01,45
+PAW Patrol,5,0.024,49
+PAW Patrol,6,0.073,47
+PAW Patrol,7,0.083,47
+PAW Patrol,8,0.08,47
+PAW Patrol,9,0.115,42
+PAW Patrol,10,0.082,49
+PAW Patrol,11,0.03,50
+Peaky Blinders,1,-0.138,6
+Peaky Blinders,2,0.059,6
+Peaky Blinders,3,-0.093,6
+Peaky Blinders,4,-0.012,6
+Peaky Blinders,5,0.006,6
+Peaky Blinders,6,-0.027,6
+Peppa Pig,1,0.103,52
+Peppa Pig,2,0.07,52
+Peppa Pig,3,0.095,52
+Peppa Pig,4,0.074,52
+Peppa Pig,5,0.109,52
+Peppa Pig,6,0.09,52
+Peppa Pig,7,0.081,65
+Peppa Pig,8,0,39
+Prison Break,1,-0.042,22
+Prison Break,2,-0.016,22
+Prison Break,3,0.006,13
+Prison Break,4,-0.021,22
+Prison Break,5,0.008,9
+Prison Cell 211,1,-0.21,6
+PULSE,2,-0.014,11
+PULSE,4,-0.047,11
+PULSE,6,-0.008,12
+PULSE,8,-0.007,13
+PULSE,9,-0.017,12
+PULSE,10,-0.009,13
+PULSE,11,0.004,12
+PULSE,13,-0.033,12
+PULSE,15,-0.103,12
+PULSE,16,-0.069,12
+PULSE,17,-0.079,12
+PULSE,18,-0.01,12
+PULSE,19,-0.023,14
+PULSE,20,-0.103,12
+PULSE,21,-0.033,11
+PULSE,22,-0.047,15
+PULSE,23,-0.04,15
+PULSE,24,-0.033,18
+PULSE,27,-0.016,27
+PULSE,28,-0.019,27
+PULSE,29,-0.021,26
+PULSE,30,-0.04,29
+PULSE,31,-0.02,29
+PULSE,32,-0.007,29
+PULSE,33,-0.041,31
+PULSE,34,-0.036,33
+PULSE,35,-0.057,30
+PULSE,36,-0.031,35
+PULSE,37,-0.024,32
+PULSE,38,-0.011,35
+PULSE,39,-0.029,31
+PULSE,40,-0.17,34
+PULSE,41,-0.179,35
+PULSE,42,-0.146,36
+PULSE,43,-0.133,35
+PULSE,44,-0.168,36
+PULSE,45,-0.071,36
+PULSE,46,-0.171,40
+PULSE,47,-0.063,37
+PULSE,48,-0.11,35
+PULSE,49,-0.103,37
+PULSE,50,-0.121,37
+PULSE,51,-0.121,36
+PULSE,52,-0.138,33
+PULSE,53,-0.045,36
+PULSE,54,-0.038,35
+PULSE,55,-0.114,32
+PULSE,56,-0.131,32
+Ransom Canyon,1,-0.131,10
+Raw,1,-0.003,45
+Raw,2,-0.005,47
+Raw,3,0.022,48
+Raw,4,-0.003,51
+Raw,5,0.021,52
+Raw,6,-0.006,52
+Raw,7,0.001,52
+Raw,8,0.013,52
+Raw,9,-0.001,53
+Raw,10,-0.002,52
+Raw,11,0.02,52
+Raw,12,0.013,52
+Raw,13,0.004,52
+Raw,14,-0.001,52
+Raw,15,0.018,53
+Raw,16,0.005,52
+Raw,17,0.024,52
+Raw,18,-0.002,52
+Raw,19,-0.014,52
+Raw,20,0.013,53
+Raw,21,0.01,52
+Raw,22,0.004,52
+Raw,23,0,52
+Raw,24,0.006,52
+Raw,25,0.017,52
+Raw,26,0.005,53
+Raw,27,-0.004,52
+Raw,28,-0.009,52
+Raw,29,-0.005,52
+Raw,30,-0.015,52
+Raw,31,-0.036,52
+Raw,32,-0.052,53
+Raw,33,-0.005,52
+Resident Alien,1,0.044,10
+Resident Alien,2,-0.092,16
+Resident Alien,3,0.009,8
+Resident Alien,4,-0.031,10
+Rick and Morty,1,0.058,11
+Rick and Morty,2,0.027,10
+Rick and Morty,3,-0.009,10
+Rick and Morty,4,0.022,10
+Rick and Morty,5,0.219,10
+Rick and Morty,6,0.078,10
+Rick and Morty,7,0.157,10
+Rick and Morty,8,0.04,10
+Running Point,1,0.017,10
+S.W.A.T. (2017),1,-0.051,22
+S.W.A.T. (2017),2,-0.046,23
+S.W.A.T. (2017),3,-0.035,21
+S.W.A.T. (2017),4,-0.064,18
+S.W.A.T. (2017),5,-0.084,22
+S.W.A.T. (2017),6,-0.153,22
+S.W.A.T. (2017),7,-0.102,13
+S.W.A.T. (2017),8,-0.255,22
+SAKAMOTO DAYS,1,-0.075,22
+Schitt's Creek,1,0.014,13
+Schitt's Creek,2,0.045,13
+Schitt's Creek,3,0.005,13
+Schitt's Creek,4,-0.056,12
+Schitt's Creek,5,0.054,14
+Schitt's Creek,6,0.052,14
+Secrets We Keep,1,0.032,6
+Seinfeld,1,0.052,5
+Seinfeld,2,0.011,12
+Seinfeld,3,0.05,23
+Seinfeld,4,0.071,24
+Seinfeld,5,0.1,22
+Seinfeld,6,0.035,24
+Seinfeld,7,0.007,24
+Seinfeld,8,0.043,22
+Seinfeld,9,-0.025,24
+Sex and the City,1,0.054,12
+Sex and the City,2,0.023,18
+Sex and the City,3,0.031,18
+Sex and the City,4,0.018,18
+Sex and the City,5,0.007,8
+Sex and the City,6,0.048,20
+Shaun the Sheep,1,0.038,40
+Shaun the Sheep,2,0.022,40
+Shaun the Sheep,3,0.02,20
+Shaun the Sheep,4,0.031,30
+Shaun the Sheep,5,0.026,20
+Shaun the Sheep,6,-0.023,20
+Sintonia,1,-0.035,6
+Sintonia,2,-0.052,6
+Sintonia,3,0.006,6
+Sintonia,4,-0.016,8
+Sintonia,5,-0.06,6
+Sirens,1,-0.033,5
+Sonic Prime,1,-0.023,8
+Sonic Prime,2,-0.039,8
+Sonic Prime,3,-0.018,7
+Special Ops,1,-0.092,8
+Special Ops,2,-0.021,8
+Spirit Riding Free,1,0.101,6
+Spirit Riding Free,2,0.107,7
+Spirit Riding Free,3,0.114,7
+Spirit Riding Free,5,0.155,7
+Spirit Riding Free,7,0.041,7
+Squid Game,1,-0.043,9
+Squid Game,2,-0.014,7
+Squid Game,3,-0.138,6
+Stranger Things,1,-0.05,8
+Stranger Things,2,-0.211,9
+Stranger Things,3,0.014,8
+Stranger Things,4,-0.05,9
+Superstore,1,0.002,11
+Superstore,2,-0.004,22
+Superstore,3,-0.009,22
+Superstore,4,-0.002,22
+Superstore,5,0.016,21
+Superstore,6,0.032,15
+Surviving Black Hawk Down,1,-0.044,3
+Sweet Magnolias,1,-0.02,10
+Sweet Magnolias,2,-0.013,10
+Sweet Magnolias,3,0.075,10
+Sweet Magnolias,4,-0.038,10
+Tastefully Yours,1,0.011,10
+The Apothecary Diaries,1,0.004,48
+The Big Bang Theory,1,0.029,17
+The Big Bang Theory,2,0.058,23
+The Big Bang Theory,3,0.031,23
+The Big Bang Theory,4,0.056,24
+The Big Bang Theory,5,0.01,24
+The Big Bang Theory,6,-0.026,24
+The Big Bang Theory,7,-0.011,24
+The Big Bang Theory,8,0.015,24
+The Big Bang Theory,9,0.026,24
+The Big Bang Theory,10,0.019,24
+The Big Bang Theory,11,0.024,24
+The Big Bang Theory,12,0.024,24
+The Blacklist,1,-0.14,22
+The Blacklist,2,-0.12,22
+The Blacklist,3,-0.112,23
+The Blacklist,4,-0.066,22
+The Blacklist,5,-0.047,22
+The Blacklist,6,-0.035,22
+The Blacklist,7,-0.073,19
+The Blacklist,8,-0.032,22
+The Blacklist,9,-0.103,22
+The Blacklist,10,-0.02,22
+The Boss Baby,1,0.073,13
+The Boss Baby,2,0.015,13
+The Boss Baby,3,0.049,11
+The Boss Baby,4,0.013,12
+The Breakthrough,1,-0.006,27
+The Chosen,1,0.005,8
+The Chosen,2,-0.012,8
+The Chosen,3,-0.05,8
+The Chosen,4,0.002,8
+The Chosen,5,-0.043,8
+The Creature Cases,1,0.008,23
+The Creature Cases,2,0,1
+The Creature Cases,3,-0.014,14
+The Creature Cases,4,0.052,10
+The Creature Cases,5,0.06,9
+The Crown,1,0.052,10
+The Crown,2,0.006,10
+The Crown,3,0,10
+The Crown,4,-0.101,10
+The Crown,5,0.052,10
+The Crown,6,-0.037,10
+The Empress,1,0.005,76
+The Eternaut,1,-0.124,6
+The Flash (2014),1,-0.076,23
+The Flash (2014),2,-0.018,23
+The Flash (2014),3,-0.025,23
+The Flash (2014),4,-0.011,23
+The Flash (2014),5,-0.083,22
+The Flash (2014),6,-0.139,19
+The Flash (2014),7,-0.026,18
+The Flash (2014),8,0.023,20
+The Flash (2014),9,0.072,13
+The Four Seasons,1,0.119,8
+The Gardener,1,0.03,29
+The Gardener,2,0.021,31
+The Glass Dome,1,-0.111,6
+The Good Place,1,0.079,13
+The Good Place,2,-0.008,12
+The Good Place,3,-0.035,12
+The Good Place,4,0.007,13
+The Lady's Companion,1,0.052,8
+The Last Kingdom,1,-0.025,8
+The Last Kingdom,2,-0.061,8
+The Last Kingdom,3,-0.065,10
+The Last Kingdom,4,-0.095,10
+The Last Kingdom,5,-0.079,10
+The Lincoln Lawyer,1,0.013,10
+The Lincoln Lawyer,2,-0.03,10
+The Lincoln Lawyer,3,-0.183,10
+The Madness,1,0.01,16
+The Night Agent,1,-0.035,10
+The Night Agent,2,-0.061,10
+The Office (U.S.),1,0.001,6
+The Office (U.S.),2,-0.031,22
+The Office (U.S.),3,0.041,23
+The Office (U.S.),4,0.016,14
+The Office (U.S.),5,0.008,26
+The Office (U.S.),6,-0.022,24
+The Office (U.S.),7,0.06,24
+The Office (U.S.),8,0.007,24
+The Office (U.S.),9,0.01,23
+The Perfect Couple,1,-0.069,6
+The Recruit,1,-0.058,8
+The Recruit,2,0.084,6
+The Residence,1,-0.053,12
+The Resident,1,-0.05,14
+The Resident,2,-0.003,23
+The Resident,3,-0.1,20
+The Resident,4,0.012,14
+The Resident,5,-0.056,23
+The Resident,6,-0.035,13
+The Rookie,1,-0.053,20
+The Rookie,2,-0.038,20
+The Rookie,3,0.003,14
+The Rookie,4,-0.076,22
+The Rookie,5,-0.045,22
+The Rookie,6,-0.093,10
+The Rookie,7,-0.06,18
+The Royals,1,-0.039,12
+The Search For Instagram's Worst Con Artist,1,-0.25,2
+The Seven Deadly Sins,1,-0.035,36
+The Snow Girl,1,-0.067,6
+The Snow Girl,2,-0.111,6
+The Survivors,10,-0.007,66
+The Trauma Code,1,0,8
+The Upshaws,1,0.077,10
+The Upshaws,2,0,16
+The Upshaws,3,0.012,12
+The Upshaws,4,0.005,10
+The Walking Dead,1,-0.109,6
+The Walking Dead,2,-0.095,13
+The Walking Dead,3,-0.063,16
+The Walking Dead,4,-0.018,16
+The Walking Dead,5,0.026,16
+The Walking Dead,6,-0.094,16
+The Walking Dead,7,-0.008,16
+The Walking Dead,8,0.005,16
+The Walking Dead,9,-0.104,16
+The Walking Dead,10,-0.036,22
+The Walking Dead,11,-0.005,24
+The Witcher,1,0.012,8
+The Witcher,2,0.087,8
+The Witcher,3,-0.042,8
+The Witcher,4,-0.078,8
+Tires,1,0.087,6
+Tires,2,-0.101,12
+Too Hot to Handle,1,0.026,9
+Too Hot to Handle,2,0,10
+Too Hot to Handle,3,0.046,10
+Too Hot to Handle,4,0.012,10
+Too Hot to Handle,5,0.038,10
+Too Hot to Handle,6,0.008,10
+Toxic Town,1,0,4
+Trailer Park Boys,1,-0.01,6
+Trailer Park Boys,2,-0.057,7
+Trailer Park Boys,3,-0.037,8
+Trailer Park Boys,4,0.047,8
+Trailer Park Boys,5,0.001,10
+Trailer Park Boys,6,-0.03,6
+Trailer Park Boys,7,0.004,10
+Trailer Park Boys,8,0.04,10
+Trailer Park Boys,9,0.045,10
+Trailer Park Boys,10,-0.005,10
+Trailer Park Boys,11,-0.046,10
+Trailer Park Boys,12,0.018,10
+TRUE,1,-0.094,8
+TRUE,2,-0.275,8
+TRUE,3,0.044,8
+TRUE,4,-0.188,6
+Unicorn Academy,1,-0.101,9
+Unicorn Academy,2,0.024,10
+Unicorn Academy,3,-0.154,1
+Unseen,1,-0.201,10
+Unseen,2,-0.159,10
+Valeria,1,0.023,8
+Valeria,2,0.109,8
+Valeria,3,0.092,8
+Valeria,4,0,6
+Virgin River,1,0.082,10
+Virgin River,2,0.11,10
+Virgin River,3,0.05,10
+Virgin River,4,0.036,12
+Virgin River,5,0.018,12
+Virgin River,6,-0.029,10
+Weak Hero,1,-0.014,8
+Weak Hero,2,-0.04,8
+Wednesday,1,0.069,8
+Wednesday,2,-0.117,8
+When Life Gives You Tangerines,1,0.162,16
+When the Phone Rings,1,0.005,12
+Woman of the Dead,1,-0.098,6
+Woman of the Dead,2,-0.123,6
+Wrong Side of the Tracks,1,-0.088,8
+WWE SmackDown,1,0.011,20
+WWE SmackDown,2,0.027,52
+WWE SmackDown,3,-0.006,52
+WWE SmackDown,4,-0.007,52
+WWE SmackDown,5,0.011,52
+WWE SmackDown,6,0.002,53
+WWE SmackDown,7,-0.002,53
+WWE SmackDown,8,0.007,52
+WWE SmackDown,9,0.041,52
+WWE SmackDown,10,0.044,52
+WWE SmackDown,11,0,52
+WWE SmackDown,12,0.001,53
+WWE SmackDown,13,0.012,52
+WWE SmackDown,14,0.015,52
+WWE SmackDown,15,0.014,52
+WWE SmackDown,16,0.005,52
+WWE SmackDown,17,0,53
+WWE SmackDown,18,0.003,52
+WWE SmackDown,19,-0.005,52
+WWE SmackDown,20,0.003,52
+WWE SmackDown,21,0.007,52
+WWE SmackDown,22,0.002,52
+WWE SmackDown,23,0.003,53
+WWE SmackDown,24,-0.011,52
+WWE SmackDown,25,-0.082,52
+WWE SmackDown,26,-0.094,52
+WWE SmackDown,27,-0.02,52
+XO, Kitty,1,0.135,10
+XO, Kitty,2,-0.005,8
+Yellowstone,1,-0.102,9
+Yellowstone,2,-0.069,10
+Yellowstone,3,0.003,10
+Yellowstone,4,-0.013,10
+Yellowstone,5,0.044,14
+Young Sheldon,1,0.058,22
+Young Sheldon,2,0.081,22
+Young Sheldon,3,0.084,21
+Young Sheldon,4,0.049,18
+Young Sheldon,5,0.082,22
+Young Sheldon,6,0.088,22
+Young Sheldon,7,-0.012,14
+Younger,1,0.018,12
+Younger,2,-0.022,12
+Younger,3,-0.031,12
+Younger,4,0.082,12
+Younger,5,0.056,12
+Younger,6,-0.003,12
+Younger,7,0.079,12
+Zero Day,1,-0.06,6

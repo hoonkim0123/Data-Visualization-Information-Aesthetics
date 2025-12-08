@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Franchise engagement and viewing patterns.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="page-head">
+    <h1>Franchise engagement and viewing patterns.</h1>
+    <p class="subtitle">Does narrative sentiment predict viewing patterns across TV seasons? 2025 Jan - Jun</p>
+  </header>
+
+<div id="explain" class="explain" aria-hidden="true">
+  <!-- explanatory text moved into right-side panel per design -->
+</div>
+
+  <div class="content">
+    <main id="chart"></main>
+
+    <aside id="episode-wall" aria-labelledby="panel-title">
+      <div class="panel-head">
+        <h2 id="panel-title">Season Sentiment</h2>
+      </div>
+
+      <div class="panel-note" aria-hidden="false">Data: Top 200 franchises by total Netflix viewing (Jan–Jun 2025). Episodes sourced from TMDB where available.</div>
+
+        <section class="panel-section" id="panel-legend">
+          <div class="sentiment-legend">
+            <div class="legend-row"><span class="sw sw-neg"></span> Negative</div>
+            <div class="legend-row"><span class="sw sw-neu"></span> Neutral</div>
+            <div class="legend-row"><span class="sw sw-pos"></span> Positive</div>
+          </div>
+        </section>
+
+        <section class="panel-section" id="panel-read">
+          <strong>How to read</strong>
+          <p>Each row = franchise ranked by total viewing.</p>
+          <p>Each segment = season, sized by viewing hours.</p>
+          <p>Color = average narrative sentiment from TMDB summaries.</p>
+        </section>
+    </aside>
+  </div>
+  <footer>
+    <small>
+      <b>Data Sources:</b> 
+      <a>What We Watched — A Netflix Engagement Report 2025 Jan - Jun</a> • 
+      <a>TMDB episode overviews</a>
+    </small>
+
+    <div class="footer-note">Note: Visualization shows <strong>Top 200</strong> franchises by total Netflix viewing (Jan–Jun 2025).</div>
+
+  <!-- UI helpers -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Center modal overlay for season drilldown -->
+  <div id="season-overlay" class="season-overlay"></div>
+
+  <!-- D3 + App -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="./spine.js"></script>
+</body>
+</html>
