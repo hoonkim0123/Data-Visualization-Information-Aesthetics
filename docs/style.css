@@ -3,14 +3,14 @@
 html, body { height: 100%; }
 body {
   margin: 10px;
-  background: #121212;         /* 어두운 배경 */
-  color: #e6e6e6;               /* 밝은 텍스트 */
+  background: #121212;         /* dark background */
+  color: #e6e6e6;               /* light text */
   font: 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
 }
 
 /* style.css: 프로젝트 질문 스타일 추가 */
 
-/* ===== Project Question (핵심) ===== */
+/* ===== Project Question (core) ===== */
 .project-question {
   grid-column: 1 / span 2;
   margin: 8px 0 12px 0;
@@ -250,9 +250,9 @@ body {
 .sw-pos { background:#1a9850 }
 .snip-instructions { color:#9a9a9a; font-size:13px; }
 
-/* 단어 하이라이트 (스니펫) */
-/* Simplified, flat highlight chips for better readability and less visual noise.
-   Consolidated definitions to avoid duplicate/contradictory rules. */
+/* Word highlights (snippet)
+  Simplified, flat highlight chips for better readability and less visual noise.
+  Consolidated definitions to avoid duplicate/contradictory rules. */
 .hi-pos {
   background: #1a9850; /* flat muted green */
   color: #f0fff4; /* light text for contrast */
@@ -268,7 +268,7 @@ body {
 /* keep a minimal soft emphasis option */
 .hi-soft{ background: rgba(255,255,255,0.03); padding:0 2px; border-radius:2px; color:inherit }
 
-/* ===== Axis text 색상 보정(혹시 테마가 덮으면) ===== */
+/* ===== Axis text color adjustments (in case theme overrides) ===== */
 .axis text { fill: #e6e6e6; }
 
 /* Pure-CSS spacing for axis labels (no JS measurement required) */
@@ -314,7 +314,7 @@ body {
 }
 
 /* Prepare right panel as a metadata/description area (visual de-emphasis of snippets)
-   We'll keep the panel but make snippet area subtle while we migrate interaction into popups. */
+  We'll keep the panel but make snippet area subtle while we migrate interaction into popups. */
 #episode-wall { width: 300px; }
 #episode-wall #panel-snippets { opacity: 0.95; font-size:13px; color:#bdbdbd; }
 #episode-wall .panel-section#panel-snippets { background: transparent; border-top: 1px dashed rgba(255,255,255,0.03); padding-top:8px }
@@ -366,11 +366,11 @@ body {
 
 
 footer {
-    margin-top: 12px;
-    margin-left: 12px;
-    margin-bottom: 18px;
-    font-size: 18px;
-    color: #7a7e83;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #7a7e83;
   
 }
 

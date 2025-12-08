@@ -1,5 +1,5 @@
 (async function () {
-  // ========= 옵션 / 반응형 =========
+  // ========= Options / Responsive =========
   // Render Top-N franchises for performance and submission scope
   const TOP_N = 200; // change this number to render more/fewer franchises
   const MAX_SANE_SEASON = 100;
@@ -8,13 +8,13 @@
   const MIN_W = 680, MAX_W = 1600, SMALL_W = 900;
   const MIN_SEG_LABEL_W = 54;
 
-  // ========= 라벨 판정(중립 폭) =========
+  // ========= Label determination (neutral epsilon) =========
   const NEUTRAL_EPS = 0.03; // ±0.03로 좁혀 색 분포 확대
   function sentimentLabel(v){
     return v>=NEUTRAL_EPS ? "Positive" : (v<=-NEUTRAL_EPS ? "Negative" : "Neutral");
   }
 
-  // ========= 헬퍼 =========
+  // ========= Helpers =========
   const parseDate = d => (d ? new Date(d) : null);
   const safeStr  = x => (x == null ? "" : String(x));
   const $  = (s)=>document.querySelector(s);
@@ -58,7 +58,7 @@
     return Array.from(out).filter(Boolean);
   }
 
-  // ========= 데이터 로드 =========
+  // ========= Data load =========
   const tv = await d3.csv("data/NetflixTV_added.csv", d3.autoType);
 
   const SENT = new Map();
@@ -77,7 +77,7 @@
     }
   });
 
-  // (옵션) 에피소드/사전 (우측 스니펫 하이라이트용)
+  // (optional) Episodes / lexicon (for right-side snippet highlights)
   let EPIS = [];
   try{ EPIS = await d3.csv("data/episodes_all_top200.csv", d3.autoType); }catch(e){}
   let LEX = new Map();
@@ -94,7 +94,7 @@
      .forEach(([w,s])=>LEX.set(w,s));
   }
 
-  // ========= 전처리(프랜차이즈/시즌) =========
+  // ========= Preprocessing (franchise / season) =========
   function franchiseKey(d) {
     const simple = safeStr(d.Simple_Title).trim();
     if (simple) return simple;
@@ -184,7 +184,7 @@
     return byFr;
   }
 
-  // ========= 색 스케일 (interpolateRgbBasis, no gamma) =========
+  // ========= Color scale (interpolateRgbBasis, no gamma) =========
   // 강부정→약부정→회색→약긍정→강긍정 (노랑 배제)
   const stops = d3.interpolateRgbBasis([
   "#b2182b",  // strong−
@@ -202,12 +202,12 @@
 
   const color = d3.scaleDiverging(stops).domain([-M, 0, M]).clamp(true);
 
-  // ========= 렌더 준비 =========
+  // ========= Render setup =========
   const rows = baseRows(tv);
   // Use Top-N summarized dataset for submission (by total views)
   const DATA = summarize(rows).slice(0, TOP_N);
 
-  // (디버그) 매칭률
+  // (debug) match rate
   {
     let f=0,t=0;
     for (const fr of DATA){ for (const p of fr.parts){ t++; if (SENT.has(`${normKey(fr.franchise)}__${+p.s}`)) f++; } }
@@ -315,7 +315,7 @@
         });
     });
 
-  // ========= 툴팁 =========
+  // ========= Tooltip =========
   const tip = d3.select("#tooltip");
   let lastTipHtml = "";
   const showTip = (html, evt) => {
@@ -334,7 +334,7 @@
   };
   const hideTip = () => { tip.style("display", "none"); lastTipHtml = ""; };
 
-  // ========= 스니펫 패널 =========
+  // ========= Snippet panel =========
   const panel = d3.select("#episode-wall");
   // track pinned selection explicitly
   let pinnedFranchise = null;
