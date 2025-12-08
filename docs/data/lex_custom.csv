@@ -1,5 +1,14 @@
 token,freq,df,sample,weight
 match,3884,1380,"After his match with El Matador, Ric Flair issues a career changing challenge to Mr. Perfect for Raw next week. WWE Champion Bret Hitman Har",0
+threatening,0,0,"",-2
+escalate,0,0,"",-1
+escalating,0,0,"",-1
+conflict,0,0,"",-1
+sacrifice,0,0,"",-1
+incredible,0,0,"",1
+stakes,0,0,"",-1
+crazy,0,0,"",-1
+bounty,0,0,"",-1
 team,2565,2004,"As alliances form among the players, no one is safe in the dorm after lights-out. The third game challenges Gi-hun's team to think strategic",0
 new,2144,1982,"A vengeful Gi-hun makes a U-turn at the airport. Later, in his hideout, he intensifies his search for the elusive recruiter who is seeking n",0
 after,2035,1910,"As alliances form among the players, no one is safe in the dorm after lights-out. The third game challenges Gi-hun's team to think strategic",0
@@ -678,7 +687,6 @@ styles,117,111,Madame Gazelle gets Peppa and her playgroup friends to dance to a
 know,117,114,Madame Gazelle has to go to the dentist so she leaves the class with Mr. Bull. The children already know the subjects Mr. Bull suggests teac,0
 ends,116,114,"The final round presents another cruel test — but this time, how it ends depends on just one player. The game's creator steps out of the sha",0
 upon,116,113,"Upon inducing a case of ""Puberty Syndrome"" where two copies of herself exists, Rio ends up staying at Sakuta's house for the time being. Mea",0
-really,116,114,George is joining Peppa at her playgroup but she doesn't really want him there - until her friends decide that George is brilliant.,1
 ever,116,115,Peppa and Suzy Sheep are best friends. But one day they have a quarrel over a game of cards and decide they are not best friends anymore. As,0
 erick,116,106,"Tonight's episode of Raw is being broadcast live from the Baltimore Arena in Baltimore, MD. The scheduled matches for tonight’s card are:
 
