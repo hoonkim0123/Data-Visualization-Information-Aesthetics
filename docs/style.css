@@ -254,13 +254,13 @@ body {
 /* Simplified, flat highlight chips for better readability and less visual noise.
    Consolidated definitions to avoid duplicate/contradictory rules. */
 .hi-pos {
-  background: rgba(46,139,87,0.22); /* flat muted green */
+  background: #1a9850; /* flat muted green */
   color: #f0fff4; /* light text for contrast */
   padding: 0 4px; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em;
 }
 
 .hi-neg {
-  background: rgba(200,60,60,0.22); /* flat muted red */
+  background: #d73027;
   color: #fff6f6; /* light text for contrast */
   padding: 0 4px; border-radius: 3px; font-weight: 600; letter-spacing: 0.02em;
 }
@@ -297,7 +297,7 @@ body {
   max-width: 95vw;
   max-height: 72vh;
 }
-.season-popup { pointer-events: none; }
+.season-popup { pointer-events: auto !important; }
 .season-popup button, .season-popup a, .season-popup .season-popup-overview { pointer-events: auto; }
 .season-popup .overview-body { color: #dcdcdc; line-height: 1.5; font-size: 13px; }
 .season-popup button { background: transparent; color: #e6e6e6; border: 1px solid rgba(255,255,255,0.06); padding: 6px 8px; border-radius:4px; cursor:pointer; transition: background-color 160ms ease, color 160ms ease, transform 120ms ease, box-shadow 160ms ease; }
@@ -375,3 +375,30 @@ footer {
 }
 
 .footer-note { font-size:13px; color:#8f9498; margin-top:8px }
+
+/* === Force unified highlight colors across popup + panel === */
+.hi-pos,
+.season-popup .overview-body .hi-pos {
+  background: #34c759 !important; /* bright green */
+  color: #0b0b0b !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+}
+
+.hi-neg,
+.season-popup .overview-body .hi-neg {
+  background: #ff453a !important; /* bright red */
+  color: #fff !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+}
+
+.hi-soft,
+.season-popup .overview-body .hi-soft {
+  background: rgba(255,255,255,0.10) !important;
+  color: #fff !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+}

@@ -344,9 +344,9 @@
     return text.split(/(\b[^\W_]+\b)/g).map(tok=>{
       const w = tok.toLowerCase();
       const s = LEX.get(w) || 0;
-      if (s >= 2)   return `<span class="hi-pos">${tok}</span>`;
-      if (s <= -2)  return `<span class="hi-neg">${tok}</span>`;
-      if (s !== 0)  return `<span class="hi-soft">${tok}</span>`;
+      // Treat ±1 as strong enough to warrant bright highlighting per user request
+      if (s >= 1)   return `<span class=\"hi-pos\">${tok}</span>`;
+      if (s <= -1)  return `<span class=\"hi-neg\">${tok}</span>`;
       return tok;
     }).join("");
   }
@@ -411,9 +411,9 @@
       fontSize: '13px',
     });
 
-    // allow clicks to pass through the popup container itself so underlying bars remain clickable
-    // but enable pointer events on interactive children (buttons/links) below
-    try{ popup.style.pointerEvents = 'none'; }catch(e){}
+    // ensure popup accepts pointer events so text selection and copying work reliably
+    // interactive children (buttons/links) are already set to pointer-events:auto
+    try{ popup.style.pointerEvents = 'auto'; }catch(e){}
 
     // header
     const hdr = document.createElement('div'); hdr.style.fontWeight='600'; hdr.style.marginBottom='8px';
@@ -471,6 +471,8 @@
     // append to chart container and position inline below the clicked bar
     chartEl.appendChild(popup);
     seasonPopup = popup;
+    // prevent clicks inside the popup from closing it via body click handlers
+    try{ popup.addEventListener('click', (e)=>{ e.stopPropagation(); }); }catch(e){}
     try{
       const rect = anchorEl.getBoundingClientRect();
       const chartRect = chartEl.getBoundingClientRect();
