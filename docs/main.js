@@ -733,7 +733,7 @@ d3.select("body").on("click", (event)=>{
     }
   }
 
-  // Render country bar chart (vertical bars, one per row like spine)
+  // Render country bar chart
   async function renderCountryView() {
     try {
       const data = await loadCountryData();
