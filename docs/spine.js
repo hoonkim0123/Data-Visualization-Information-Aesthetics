@@ -323,20 +323,32 @@
   const tip = d3.select("#tooltip");
   let lastTipHtml = "";
   const showTip = (html, evt) => {
+    if (!tip || !tip.node()) {
+      console.warn('Tooltip element not found');
+      return;
+    }
     if (html !== lastTipHtml) {
       tip.html(html);
       lastTipHtml = html;
     }
     tip.style("display", "block")
+       .style("opacity", "1")
        .style("left", (evt.clientX + 14) + "px")
        .style("top", (evt.clientY + 14) + "px");
   };
   const moveTip = (evt) => {
     // Only update position on frequent mousemove events
-    tip.style("left", (evt.clientX + 14) + "px")
-       .style("top", (evt.clientY + 14) + "px");
+    if (tip && tip.node()) {
+      tip.style("left", (evt.clientX + 14) + "px")
+         .style("top", (evt.clientY + 14) + "px");
+    }
   };
-  const hideTip = () => { tip.style("display", "none"); lastTipHtml = ""; };
+  const hideTip = () => {
+    if (tip && tip.node()) {
+      tip.style("display", "none").style("opacity", "0");
+    }
+    lastTipHtml = "";
+  };
 
   // ========= Snippet panel =========
   const panel = d3.select("#episode-wall");
@@ -638,6 +650,7 @@ DATA.forEach(d => {
       })
       // ✅ Hover: 툴팁만 표시
       .on("mouseenter", (evt)=>{
+        console.log('Season bar hover triggered for:', d.franchise, 'Season:', p.s);
         const sDisp = `${sVal>=0?"+":""}${d3.format(".2f")(sVal)}`;
         const seasonView = d3.format(".2s")(p.v);
         const html = `
@@ -645,6 +658,7 @@ DATA.forEach(d => {
           <div>Season <b>S${p.s}</b> · Viewing <b>${seasonView}</b></div>
           <div>Sentiment <b>${label}</b> <span style="opacity:.85">(${sDisp})</span>${sent? (' · Episodes ' + sent.n) : ''}</div>
           <div>New <b>${d3.format(".0%")(d.latestShare)}</b> · Lib <b>${d3.format(".0%")(d.carryShare)}</b></div>`;
+        console.log('Calling showTip with HTML:', html);
         showTip(html, evt);
         // show brief season metadata in the right panel while hovering (if not pinned)
         if (!pinnedFranchise && !pinnedSeason) {
@@ -693,6 +707,12 @@ d3.select("body").on("click", (event)=>{
   const toggleBtn = document.getElementById('toggle-country-btn');
   const chartContainer = document.getElementById('chart');
 
+  // Create separate container for country view
+  const countryChartContainer = document.createElement('div');
+  countryChartContainer.id = 'country-chart-container';
+  countryChartContainer.style.display = 'none';
+  chartContainer.parentNode.insertBefore(countryChartContainer, chartContainer.nextSibling);
+
   // Store original franchise chart HTML on first render
   originalChartHTML = chartContainer.innerHTML;
 
@@ -718,6 +738,7 @@ d3.select("body").on("click", (event)=>{
     try {
       const data = await loadCountryData();
       const countriesObj = data.countries;
+      console.log('renderCountryView started, countries:', countriesObj);
 
       // Country code to full name mapping
       const countryNames = {
@@ -746,9 +767,11 @@ d3.select("body").on("click", (event)=>{
 
       console.log('Countries array:', countries);
 
-      chartContainer.innerHTML = '';
+      countryChartContainer.innerHTML = '';
 
-    const width = chartContainer.clientWidth;
+    // Get container width - account for padding and border
+    const containerWidth = countryChartContainer.offsetWidth || 600;
+    
     const rowHeight = 60;
     const totalHeight = rowHeight * countries.length;
     const leftMargin = 80;
@@ -777,15 +800,16 @@ d3.select("body").on("click", (event)=>{
     }
 
     // SVG container
-    const svg = d3.select('#chart')
+    const svg = d3.select('#country-chart-container')
       .append('svg')
-      .attr('width', width)
+      .attr('width', containerWidth)
       .attr('height', totalHeight + 40)
+      .style('max-width', '100%')
       .append('g')
       .attr('transform', `translate(${leftMargin}, 20)`);
 
     const maxViews = d3.max(countries, d => d.total_views);
-    const barWidth = width - leftMargin - rightMargin;
+    const barWidth = containerWidth - leftMargin - rightMargin;
 
     // Tooltip
     const tooltip = document.getElementById('tooltip');
@@ -818,13 +842,15 @@ d3.select("body").on("click", (event)=>{
       .attr('width', d => (d.total_views / maxViews) * barWidth)
       .attr('height', rowHeight * 0.6)
       .style('fill', d => getSentimentColor(d.weighted_sentiment))
+      .style('stroke', 'rgba(255, 255, 255, 0.15)')
+      .style('stroke-width', '1px')
       .style('cursor', 'pointer')
       .style('transition', 'all 0.15s')
       .on('mouseenter', function(event, d) {
         console.log('Bar hover triggered:', d);
         d3.select(this)
           .style('filter', 'brightness(1.2)')
-          .style('stroke', '#fff')
+          .style('stroke', 'rgba(255, 255, 255, 0.3)')
           .style('stroke-width', '1px');
 
         // Get top franchise for this country
@@ -836,28 +862,36 @@ d3.select("body").on("click", (event)=>{
           topFranchiseText = `${topSegment.title} (${(topSegment.views / 1e6).toFixed(0)}M)`;
         }
 
-        tooltip.innerHTML = `
-          <strong>${d.name}</strong><br/>
-          Views: ${(d.total_views / 1e9).toFixed(2)}B<br/>
-          Titles: ${d.total_titles}<br/>
-          Sentiment: ${d.weighted_sentiment.toFixed(3)}<br/>
-          <br/>
-          <em>Top franchise:</em><br/>
-          ${topFranchiseText}
-        `;
-        tooltip.style.left = (event.pageX + 10) + 'px';
-        tooltip.style.top = (event.pageY - 10) + 'px';
-        tooltip.style.opacity = '1';
+        if (tooltip) {
+          tooltip.innerHTML = `
+            <strong>${d.name}</strong><br/>
+            Views: ${(d.total_views / 1e9).toFixed(2)}B<br/>
+            Titles: ${d.total_titles}<br/>
+            Sentiment: ${d.weighted_sentiment.toFixed(3)}<br/>
+            <br/>
+            <em>Top franchise:</em><br/>
+            ${topFranchiseText}
+          `;
+          tooltip.style.left = (event.pageX + 10) + 'px';
+          tooltip.style.top = (event.pageY - 10) + 'px';
+          tooltip.style.display = 'block';
+          tooltip.style.opacity = '1';
+        }
       })
       .on('mousemove', function(event) {
-        tooltip.style.left = (event.pageX + 10) + 'px';
-        tooltip.style.top = (event.pageY - 10) + 'px';
+        if (tooltip) {
+          tooltip.style.left = (event.pageX + 10) + 'px';
+          tooltip.style.top = (event.pageY - 10) + 'px';
+        }
       })
       .on('mouseleave', function() {
         d3.select(this)
           .style('filter', 'none')
           .style('stroke', 'none');
-        tooltip.style.opacity = '0';
+        if (tooltip) {
+          tooltip.style.opacity = '0';
+          tooltip.style.display = 'none';
+        }
       });
 
     // Value label on bar
@@ -878,38 +912,27 @@ d3.select("body").on("click", (event)=>{
   // Toggle handler
   toggleBtn.addEventListener('click', async () => {
     if (isCountryView) {
-      // Switch back to franchise view
-      chartContainer.innerHTML = originalChartHTML;
+      // Switch back to franchise view - reload page to restore hover events
+      window.location.reload();
       
-      // Restore original panel content
-      const panelTitle = document.getElementById('panel-title');
-      const panelNote = document.querySelector('.panel-note');
-      const panelRead = document.querySelector('#panel-read');
-      
-      panelTitle.textContent = 'Season Sentiment';
-      panelNote.textContent = 'Data: Top 200 franchises by total Netflix viewing (Jan–Jun 2025). Episodes sourced from TMDB where available.';
-      panelRead.innerHTML = `
-        <strong>How to read</strong>
-        <p>Each row = franchise ranked by total viewing.</p>
-        <p>Each segment = season, sized by viewing hours.</p>
-        <p>Color = average narrative sentiment from TMDB summaries.</p>
-      `;
-      
-      toggleBtn.classList.remove('active');
-      isCountryView = false;
-      toggleBtn.textContent = '🌍 Production by Country';
     } else {
-      // Switch to country view
-      await renderCountryView();
+      // Switch to country view - show container FIRST before rendering
+      chartContainer.style.display = 'none';
+      countryChartContainer.style.display = 'block';
+      
+      // Render country chart if not already rendered
+      if (!countryChartContainer.querySelector('svg')) {
+        await renderCountryView();
+      }
       
       // Update panel content for country view
       const panelTitle = document.getElementById('panel-title');
       const panelNote = document.querySelector('.panel-note');
       const panelRead = document.querySelector('#panel-read');
       
-      panelTitle.textContent = 'Production by Country';
-      panelNote.textContent = 'Data: Top 10 production countries aggregated from What We Watched — A Netflix Engagement Report 2025 Jan - Jun. Mapped to production metadata from TMDB.';
-      panelRead.innerHTML = `
+      if (panelTitle) panelTitle.textContent = 'Production by Country';
+      if (panelNote) panelNote.textContent = 'Data: Top 10 production countries aggregated from What We Watched — A Netflix Engagement Report 2025 Jan - Jun. Mapped to production metadata from TMDB.';
+      if (panelRead) panelRead.innerHTML = `
         <strong>How to read</strong>
         <p>Each row = country ranked by total viewing hours.</p>
         <p>Bar color = weighted average narrative sentiment of titles produced in that country.</p>
