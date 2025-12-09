@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "description": "Top 10 production countries by total views",
+    "note": "Represents where content is PRODUCED (not consumed)",
+    "total_views_global": 25711700000.0,
+    "total_titles_global": 1622
+  },
+  "countries": [
+    {
+      "code": "USA",
+      "rank": 1,
+      "total_views": 9763183333.333332,
+      "weighted_sentiment": -0.0234,
+      "total_titles": 718,
+      "mean_sentiment": -0.0064,
+      "top_genres": [
+        "Drama",
+        "Comedy",
+        "Crime",
+        "Action",
+        "Adventure"
+      ]
+    },
+    {
+      "code": "KOR",
+      "rank": 2,
+      "total_views": 6125699999.999999,
+      "weighted_sentiment": 0.0004,
+      "total_titles": 209,
+      "mean_sentiment": -0.0123,
+      "top_genres": [
+        "Drama",
+        "Romance",
+        "Comedy",
+        "Thriller",
+        "Mystery"
+      ]
+    },
+    {
+      "code": "GBR",
+      "rank": 3,
+      "total_views": 1850762500.0,
+      "weighted_sentiment": -0.0851,
+      "total_titles": 201,
+      "mean_sentiment": -0.0615,
+      "top_genres": [
+        "Drama",
+        "Crime",
+        "Comedy",
+        "Thriller",
+        "Children"
+      ]
+    },
+    {
+      "code": "JPN",
+      "rank": 4,
+      "total_views": 1449541666.6666667,
+      "weighted_sentiment": -0.0432,
+      "total_titles": 172,
+      "mean_sentiment": -0.0248,
+      "top_genres": [
+        "Anime",
+        "Action",
+        "Fantasy",
+        "Drama",
+        "Comedy"
+      ]
+    },
+    {
+      "code": "COL",
+      "rank": 5,
+      "total_views": 1173900000.0,
+      "weighted_sentiment": 0.0017,
+      "total_titles": 18,
+      "mean_sentiment": -0.0165,
+      "top_genres": [
+        "Drama",
+        "Romance",
+        "Crime",
+        "Thriller",
+        "Comedy"
+      ]
+    },
+    {
+      "code": "ESP",
+      "rank": 6,
+      "total_views": 616675000.0,
+      "weighted_sentiment": 0.0481,
+      "total_titles": 57,
+      "mean_sentiment": 0.058,
+      "top_genres": [
+        "Drama",
+        "Thriller",
+        "Crime",
+        "Mystery",
+        "Comedy"
+      ]
+    },
+    {
+      "code": "AUS",
+      "rank": 7,
+      "total_views": 555416666.6666667,
+      "weighted_sentiment": 0.0016,
+      "total_titles": 37,
+      "mean_sentiment": 0.0295,
+      "top_genres": [
+        "Drama",
+        "Comedy",
+        "Mystery",
+        "Children",
+        "Crime"
+      ]
+    },
+    {
+      "code": "CAN",
+      "rank": 8,
+      "total_views": 520375000.0,
+      "weighted_sentiment": -0.0445,
+      "total_titles": 103,
+      "mean_sentiment": -0.0133,
+      "top_genres": [
+        "Drama",
+        "Children",
+        "Comedy",
+        "Adventure",
+        "Action"
+      ]
+    },
+    {
+      "code": "MEX",
+      "rank": 9,
+      "total_views": 427400000.0,
+      "weighted_sentiment": -0.1192,
+      "total_titles": 40,
+      "mean_sentiment": -0.095,
+      "top_genres": [
+        "Drama",
+        "Crime",
+        "Thriller",
+        "Mystery",
+        "Action"
+      ]
+    },
+    {
+      "code": "DEU",
+      "rank": 10,
+      "total_views": 370742261.9047619,
+      "weighted_sentiment": -0.0505,
+      "total_titles": 35,
+      "mean_sentiment": -0.038,
+      "top_genres": [
+        "Drama",
+        "Thriller",
+        "Crime",
+        "Comedy",
+        "Mystery"
+      ]
+    }
+  ]
+}

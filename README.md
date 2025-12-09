@@ -1,7 +1,6 @@
-
 # Franchise engagement and viewing patterns
 
-An interactive visualization that explores Netflix franchise viewing and season-level narrative sentiment (Top 200 franchises).
+An interactive visualization exploring Netflix franchise viewing patterns and narrative sentiment across seasons. **Toggle between franchise-level and production-country-level views** to reveal how emotional tone and engagement vary by content origin.
 
 ## 🔗 Live Demo
 
@@ -9,18 +8,23 @@ An interactive visualization that explores Netflix franchise viewing and season-
 
 ![Preview screenshot](preview/PreviewImg.png)
 
-
-
 ## 📖 About
 
-Franchise Viewing analyzes Netflix’s Top 200 TV franchises to reveal how audiences engage with long-running series — and how emotional tone (derived from TMDB episode summaries) shifts across seasons.
+This project analyzes Netflix's Top 200 TV franchises to reveal how audiences engage with long-running series — and how emotional tone (derived from TMDB episode summaries) shifts across seasons.
 
-The core visualization is a Franchise Spine:
-- Each row represents a franchise
-- Each segment represents a season
-- Width shows viewing hours (from Netflix’s What We Watched)
+### Main Visualization: Franchise Spine
+- Each row represents a franchise ranked by total viewing
+- Each segment represents a season, sized by viewing hours
 - Color shows average narrative sentiment (negative → neutral → positive)
-Clicking a season opens an episode-level overlay, letting viewers explore how story beats evolve throughout the season.
+- Click a season to explore episode-level details
+
+### Secondary View: Production by Country
+- Toggle via the **"🌍 Production by Country"** button in the header
+- Shows top 10 production countries aggregated from all Netflix content
+- Each country bar represents total viewing hours of its produced content
+- Color indicates weighted average sentiment of productions from that country
+- Hover to see the top franchise from each country
+- **Note:** Shows where content is *produced*, not where it's consumed
 
 ## 📊 Data
 
@@ -37,4 +41,4 @@ Clicking a season opens an episode-level overlay, letting viewers explore how st
 
 **Saehun Kim** (he/him)  
 MS Data Visualization '25  
-Parsons School of Design 
+Parsons School of Design

@@ -1,4 +1,9 @@
 (async function () {
+  // ========= Global State =========
+  let isCountryView = false;
+  let originalChartHTML = null;
+  let countryData = null;
+
   // ========= Options / Responsive =========
   // Render Top-N franchises for performance and submission scope
   const TOP_N = 200; // change this number to render more/fewer franchises
@@ -185,7 +190,6 @@
   }
 
   // ========= Color scale (interpolateRgbBasis, no gamma) =========
-  // 강부정→약부정→회색→약긍정→강긍정 (노랑 배제)
   const stops = d3.interpolateRgbBasis([
   "#b2182b",  // strong−
   "#d87474",  // mild−
@@ -657,7 +661,7 @@ DATA.forEach(d => {
     acc += p.v;
   });
 
-  // Total 표시
+  // Total
   svg.append("text")
     .attr("x", margin.left + width - 8)
     .attr("y", cy + y.bandwidth()/2)
@@ -667,8 +671,7 @@ DATA.forEach(d => {
     .attr("fill","#a8a8a8")
     .text(d3.format(".2s")(d.total));
 });
-
-// ✅ 배경 클릭시 고정 해제
+// ========= Global click handler to unpin selection =========
 d3.select("body").on("click", (event)=>{
   // Unpin any pinned selection when clicking outside chart elements,
   // but keep the right panel visible and show the default instruction.
@@ -685,4 +688,240 @@ d3.select("body").on("click", (event)=>{
 });
 
   // explanatory copy moved into right panel (index.html). No auto-insert into header.
+
+  // ========= COUNTRY VIEW TOGGLE =========
+  const toggleBtn = document.getElementById('toggle-country-btn');
+  const chartContainer = document.getElementById('chart');
+
+  // Store original franchise chart HTML on first render
+  originalChartHTML = chartContainer.innerHTML;
+
+  // Load country data
+  async function loadCountryData() {
+    if (countryData) return countryData;
+    try {
+      const response = await fetch('./data/country_segments_top5.json');
+      if (!response.ok) {
+        throw new Error(`Failed to load: ${response.status}`);
+      }
+      countryData = await response.json();
+      console.log('Country data loaded:', countryData);
+      return countryData;
+    } catch (error) {
+      console.error('Error loading country data:', error);
+      throw error;
+    }
+  }
+
+  // Render country bar chart (vertical bars, one per row like spine)
+  async function renderCountryView() {
+    try {
+      const data = await loadCountryData();
+      const countriesObj = data.countries;
+
+      // Country code to full name mapping
+      const countryNames = {
+        'USA': 'United States',
+        'KOR': 'South Korea',
+        'GBR': 'United Kingdom',
+        'JPN': 'Japan',
+        'COL': 'Colombia',
+        'ESP': 'Spain',
+        'AUS': 'Australia',
+        'CAN': 'Canada',
+        'MEX': 'Mexico',
+        'DEU': 'Germany'
+      };
+
+      // Convert object to array with code
+      const countries = Object.keys(countriesObj)
+        .map(code => ({
+          code: code,
+          name: countryNames[code] || code,
+          total_views: countriesObj[code].total_views,
+          weighted_sentiment: countriesObj[code].weighted_sentiment,
+          total_titles: countriesObj[code].total_titles,
+          segments: countriesObj[code].segments
+        }));
+
+      console.log('Countries array:', countries);
+
+      chartContainer.innerHTML = '';
+
+    const width = chartContainer.clientWidth;
+    const rowHeight = 60;
+    const totalHeight = rowHeight * countries.length;
+    const leftMargin = 80;
+    const rightMargin = 60;
+
+    // Use the same color scale as franchise chart
+    const sentPool = countries.map(d => d.weighted_sentiment).filter(Number.isFinite);
+    const sSorted = sentPool.length ? [...sentPool].sort(d3.ascending) : [-0.5, -0.2, 0, 0.2, 0.5];
+    const q05 = d3.quantileSorted(sSorted, 0.05);
+    const q95 = d3.quantileSorted(sSorted, 0.95);
+    const M = Math.max(Math.abs(q05), Math.abs(q95), 0.12);
+
+    const stops = d3.interpolateRgbBasis([
+      "#b2182b",  // strong negative (red)
+      "#d87474",  // mild negative
+      "#9aa0a6",  // neutral (gray)
+      "#7ccf93",  // mild positive
+      "#1a9850"   // strong positive (green)
+    ]);
+
+    const colorScale = d3.scaleDiverging(stops).domain([-M, 0, M]).clamp(true);
+
+    // Sentiment color function
+    function getSentimentColor(sentiment) {
+      return colorScale(sentiment);
+    }
+
+    // SVG container
+    const svg = d3.select('#chart')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', totalHeight + 40)
+      .append('g')
+      .attr('transform', `translate(${leftMargin}, 20)`);
+
+    const maxViews = d3.max(countries, d => d.total_views);
+    const barWidth = width - leftMargin - rightMargin;
+
+    // Tooltip
+    const tooltip = document.getElementById('tooltip');
+
+    // Render each country as a row
+    const rows = svg.selectAll('.country-row')
+      .data(countries)
+      .enter()
+      .append('g')
+      .attr('class', 'country-row')
+      .attr('transform', (d, i) => `translate(0, ${i * rowHeight})`);
+
+    // Country label
+    rows.append('text')
+      .attr('class', 'country-label')
+      .attr('x', -12)
+      .attr('y', rowHeight / 2)
+      .attr('dominant-baseline', 'middle')
+      .attr('text-anchor', 'end')
+      .attr('font-size', '14px')
+      .attr('font-weight', '600')
+      .attr('fill', '#d9d9d9')
+      .text(d => d.code);
+
+    // Bar
+    rows.append('rect')
+      .attr('class', 'country-bar')
+      .attr('x', 0)
+      .attr('y', rowHeight * 0.2)
+      .attr('width', d => (d.total_views / maxViews) * barWidth)
+      .attr('height', rowHeight * 0.6)
+      .style('fill', d => getSentimentColor(d.weighted_sentiment))
+      .style('cursor', 'pointer')
+      .style('transition', 'all 0.15s')
+      .on('mouseenter', function(event, d) {
+        console.log('Bar hover triggered:', d);
+        d3.select(this)
+          .style('filter', 'brightness(1.2)')
+          .style('stroke', '#fff')
+          .style('stroke-width', '1px');
+
+        // Get top franchise for this country
+        const countryInfo = data.countries[d.code];
+        console.log('Country info:', countryInfo);
+        let topFranchiseText = 'N/A';
+        if (countryInfo && countryInfo.segments && countryInfo.segments.length > 0) {
+          const topSegment = countryInfo.segments[0];
+          topFranchiseText = `${topSegment.title} (${(topSegment.views / 1e6).toFixed(0)}M)`;
+        }
+
+        tooltip.innerHTML = `
+          <strong>${d.name}</strong><br/>
+          Views: ${(d.total_views / 1e9).toFixed(2)}B<br/>
+          Titles: ${d.total_titles}<br/>
+          Sentiment: ${d.weighted_sentiment.toFixed(3)}<br/>
+          <br/>
+          <em>Top franchise:</em><br/>
+          ${topFranchiseText}
+        `;
+        tooltip.style.left = (event.pageX + 10) + 'px';
+        tooltip.style.top = (event.pageY - 10) + 'px';
+        tooltip.style.opacity = '1';
+      })
+      .on('mousemove', function(event) {
+        tooltip.style.left = (event.pageX + 10) + 'px';
+        tooltip.style.top = (event.pageY - 10) + 'px';
+      })
+      .on('mouseleave', function() {
+        d3.select(this)
+          .style('filter', 'none')
+          .style('stroke', 'none');
+        tooltip.style.opacity = '0';
+      });
+
+    // Value label on bar
+    rows.append('text')
+      .attr('class', 'country-value')
+      .attr('x', d => (d.total_views / maxViews) * barWidth + 6)
+      .attr('y', rowHeight / 2)
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', '12px')
+      .attr('fill', '#a8a8a8')
+      .text(d => (d.total_views / 1e9).toFixed(1) + 'B');
+    } catch (error) {
+      console.error('Error rendering country view:', error);
+      chartContainer.innerHTML = '<p style="color: #cc4c02; padding: 20px;">Error loading country data</p>';
+    }
+  }
+
+  // Toggle handler
+  toggleBtn.addEventListener('click', async () => {
+    if (isCountryView) {
+      // Switch back to franchise view
+      chartContainer.innerHTML = originalChartHTML;
+      
+      // Restore original panel content
+      const panelTitle = document.getElementById('panel-title');
+      const panelNote = document.querySelector('.panel-note');
+      const panelRead = document.querySelector('#panel-read');
+      
+      panelTitle.textContent = 'Season Sentiment';
+      panelNote.textContent = 'Data: Top 200 franchises by total Netflix viewing (Jan–Jun 2025). Episodes sourced from TMDB where available.';
+      panelRead.innerHTML = `
+        <strong>How to read</strong>
+        <p>Each row = franchise ranked by total viewing.</p>
+        <p>Each segment = season, sized by viewing hours.</p>
+        <p>Color = average narrative sentiment from TMDB summaries.</p>
+      `;
+      
+      toggleBtn.classList.remove('active');
+      isCountryView = false;
+      toggleBtn.textContent = '🌍 Production by Country';
+    } else {
+      // Switch to country view
+      await renderCountryView();
+      
+      // Update panel content for country view
+      const panelTitle = document.getElementById('panel-title');
+      const panelNote = document.querySelector('.panel-note');
+      const panelRead = document.querySelector('#panel-read');
+      
+      panelTitle.textContent = 'Production by Country';
+      panelNote.textContent = 'Data: Top 10 production countries aggregated from What We Watched — A Netflix Engagement Report 2025 Jan - Jun. Mapped to production metadata from TMDB.';
+      panelRead.innerHTML = `
+        <strong>How to read</strong>
+        <p>Each row = country ranked by total viewing hours.</p>
+        <p>Bar color = weighted average narrative sentiment of titles produced in that country.</p>
+        <p>Hover = top franchise produced in that country.</p>
+        <br/>
+        <em style="color: #8f9498; font-size: 12px;">Note: "Production country" ≠ "consumption region". This shows where content is made, not where it's watched.</em>
+      `;
+      
+      toggleBtn.classList.add('active');
+      isCountryView = true;
+      toggleBtn.textContent = '← Back to Franchises';
+    }
+  });
+
 })();

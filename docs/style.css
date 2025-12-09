@@ -8,6 +8,25 @@ body {
   font: 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
 }
 
+/* ===== Tooltip ===== */
+#tooltip {
+  position: fixed;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(122, 156, 255, 0.4);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #e8e8e8;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.15s;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  display: block;
+  visibility: visible;
+}
+
 /* style.css: 프로젝트 질문 스타일 추가 */
 
 /* ===== Project Question (core) ===== */
@@ -57,16 +76,53 @@ body {
   padding-top: 12px;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .page-head h1 {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: 0.12px;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   gap: 6px;
   display: flex;
   flex-direction: column;
+  flex: 1;
+}
+
+.toggle-country-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+.toggle-country-btn:hover {
+  background: rgba(122, 156, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.toggle-country-btn.active {
+  background: rgba(122, 156, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 
 .page-head .subtitle {
@@ -402,3 +458,5 @@ footer {
   padding: 1px 4px !important;
   border-radius: 3px !important;
 }
+
+

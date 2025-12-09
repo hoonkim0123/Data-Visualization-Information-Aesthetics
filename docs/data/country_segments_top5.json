@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "total_titles_seen": 1622,
+    "total_views": 25711700000.0
+  },
+  "countries": {
+    "USA": {
+      "total_views": 9763183333.333332,
+      "weighted_sentiment": -0.023426678898433372,
+      "total_titles": 718,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Adolescence",
+          "views": 144800000,
+          "imdb": "tt31806037"
+        },
+        {
+          "rank": 2,
+          "title": "Zero Day",
+          "views": 61300000,
+          "imdb": "tt23872886"
+        },
+        {
+          "rank": 3,
+          "title": "Sirens",
+          "views": 53300000,
+          "imdb": "tt31429675"
+        },
+        {
+          "rank": 4,
+          "title": "The Night Agent",
+          "views": 53200000,
+          "imdb": "tt13918776"
+        },
+        {
+          "rank": 5,
+          "title": "Ginny & Georgia",
+          "views": 48100000,
+          "imdb": "tt10813940"
+        },
+        {
+          "rank": 6,
+          "title": "Others (713)",
+          "views": 9402483333.333332,
+          "imdb": ""
+        }
+      ]
+    },
+    "KOR": {
+      "total_views": 6125699999.999999,
+      "weighted_sentiment": 0.0003873173233057004,
+      "total_titles": 209,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Squid Game",
+          "views": 117300000,
+          "imdb": "tt10919420"
+        },
+        {
+          "rank": 2,
+          "title": "Missing You",
+          "views": 58000000,
+          "imdb": "tt3215124"
+        },
+        {
+          "rank": 3,
+          "title": "When Life Gives You Tangerines",
+          "views": 34800000,
+          "imdb": "tt26471411"
+        },
+        {
+          "rank": 4,
+          "title": "Devil May Cry",
+          "views": 18200000,
+          "imdb": "tt15716776"
+        },
+        {
+          "rank": 5,
+          "title": "When the Phone Rings",
+          "views": 14300000,
+          "imdb": "tt33503491"
+        },
+        {
+          "rank": 6,
+          "title": "Others (204)",
+          "views": 5883099999.999999,
+          "imdb": ""
+        }
+      ]
+    },
+    "GBR": {
+      "total_views": 1850762500.0,
+      "weighted_sentiment": -0.08509140250855189,
+      "total_titles": 201,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Adolescence",
+          "views": 144800000,
+          "imdb": "tt31806037"
+        },
+        {
+          "rank": 2,
+          "title": "Black Mirror",
+          "views": 30500000,
+          "imdb": "tt2085059"
+        },
+        {
+          "rank": 3,
+          "title": "Dept. Q",
+          "views": 25400000,
+          "imdb": "tt27995114"
+        },
+        {
+          "rank": 4,
+          "title": "Peppa Pig",
+          "views": 23100000,
+          "imdb": "tt0426769"
+        },
+        {
+          "rank": 5,
+          "title": "Black Doves",
+          "views": 17700000,
+          "imdb": "tt27995113"
+        },
+        {
+          "rank": 6,
+          "title": "Others (196)",
+          "views": 1609262500.0,
+          "imdb": ""
+        }
+      ]
+    },
+    "JPN": {
+      "total_views": 1449541666.6666667,
+      "weighted_sentiment": -0.043173110384925516,
+      "total_titles": 172,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Devil May Cry",
+          "views": 18200000,
+          "imdb": "tt15716776"
+        },
+        {
+          "rank": 2,
+          "title": "Alice in Borderland",
+          "views": 10600000,
+          "imdb": "tt10795658"
+        },
+        {
+          "rank": 3,
+          "title": "Sonic Prime",
+          "views": 10400000,
+          "imdb": "tt13961348"
+        },
+        {
+          "rank": 4,
+          "title": "The Apothecary Diaries",
+          "views": 7800000,
+          "imdb": "tt26743760"
+        },
+        {
+          "rank": 5,
+          "title": "Solo Leveling",
+          "views": 7400000,
+          "imdb": "tt21209876"
+        },
+        {
+          "rank": 6,
+          "title": "Others (167)",
+          "views": 1395141666.6666667,
+          "imdb": ""
+        }
+      ]
+    },
+    "COL": {
+      "total_views": 1173900000.0,
+      "weighted_sentiment": 0.0016509754028837958,
+      "total_titles": 18,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Medusa",
+          "views": 21100000,
+          "imdb": "tt35836959"
+        },
+        {
+          "rank": 2,
+          "title": "The Queen of Flow",
+          "views": 1100000,
+          "imdb": "tt8560918"
+        },
+        {
+          "rank": 6,
+          "title": "Others (16)",
+          "views": 1151700000.0,
+          "imdb": ""
+        }
+      ]
+    },
+    "ESP": {
+      "total_views": 616675000.0,
+      "weighted_sentiment": 0.04810151006711409,
+      "total_titles": 57,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Olympo",
+          "views": 10800000,
+          "imdb": "tt33029688"
+        },
+        {
+          "rank": 2,
+          "title": "Bad Dinosaurs",
+          "views": 8900000,
+          "imdb": "tt20917538"
+        },
+        {
+          "rank": 3,
+          "title": "Valeria",
+          "views": 8100000,
+          "imdb": "tt9731288"
+        },
+        {
+          "rank": 4,
+          "title": "Court of Gold",
+          "views": 6600000,
+          "imdb": "tt32376394"
+        },
+        {
+          "rank": 6,
+          "title": "Others (53)",
+          "views": 582275000.0,
+          "imdb": ""
+        }
+      ]
+    },
+    "AUS": {
+      "total_views": 555416666.6666667,
+      "weighted_sentiment": 0.0016372045220966085,
+      "total_titles": 37,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "The Survivors",
+          "views": 19700000,
+          "imdb": "tt28703560"
+        },
+        {
+          "rank": 2,
+          "title": "Apple Cider Vinegar",
+          "views": 18300000,
+          "imdb": "tt30428143"
+        },
+        {
+          "rank": 3,
+          "title": "Love on the Spectrum",
+          "views": 12900000,
+          "imdb": "tt11904786"
+        },
+        {
+          "rank": 4,
+          "title": "Territory",
+          "views": 6600000,
+          "imdb": "tt28703559"
+        },
+        {
+          "rank": 5,
+          "title": "The Amazing Digital Circus",
+          "views": 5700000,
+          "imdb": "tt27610198"
+        },
+        {
+          "rank": 6,
+          "title": "Others (32)",
+          "views": 492216666.66666675,
+          "imdb": ""
+        }
+      ]
+    },
+    "CAN": {
+      "total_views": 520375000.0,
+      "weighted_sentiment": -0.04447830101569714,
+      "total_titles": 103,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "The Recruit",
+          "views": 24100000,
+          "imdb": "tt16030542"
+        },
+        {
+          "rank": 2,
+          "title": "Bet",
+          "views": 13600000,
+          "imdb": "tt32063523"
+        },
+        {
+          "rank": 3,
+          "title": "Departure",
+          "views": 13500000,
+          "imdb": "tt9252156"
+        },
+        {
+          "rank": 4,
+          "title": "Sonic Prime",
+          "views": 10400000,
+          "imdb": "tt13961348"
+        },
+        {
+          "rank": 5,
+          "title": "The Rookie",
+          "views": 9000000,
+          "imdb": "tt7587890"
+        },
+        {
+          "rank": 6,
+          "title": "Others (98)",
+          "views": 449775000.0,
+          "imdb": ""
+        }
+      ]
+    },
+    "MEX": {
+      "total_views": 427400000.0,
+      "weighted_sentiment": -0.11924019607843138,
+      "total_titles": 40,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Bandidos",
+          "views": 7700000,
+          "imdb": "tt11262142"
+        },
+        {
+          "rank": 2,
+          "title": "El Chapo",
+          "views": 3400000,
+          "imdb": "tt6692188"
+        },
+        {
+          "rank": 6,
+          "title": "Others (38)",
+          "views": 416300000.0,
+          "imdb": ""
+        }
+      ]
+    },
+    "DEU": {
+      "total_views": 370742261.9047619,
+      "weighted_sentiment": -0.05053932584269663,
+      "total_titles": 35,
+      "segments": [
+        {
+          "rank": 1,
+          "title": "Cassandra",
+          "views": 39300000,
+          "imdb": "tt29135600"
+        },
+        {
+          "rank": 2,
+          "title": "How to Sell Drugs Online (Fast)",
+          "views": 6400000,
+          "imdb": "tt9184994"
+        },
+        {
+          "rank": 3,
+          "title": "The Amazing World of Gumball",
+          "views": 4600000,
+          "imdb": "tt1942683"
+        },
+        {
+          "rank": 4,
+          "title": "Dark",
+          "views": 2900000,
+          "imdb": "tt5753856"
+        },
+        {
+          "rank": 5,
+          "title": "A Good Girl's Guide to Murder",
+          "views": 2400000,
+          "imdb": "tt28118211"
+        },
+        {
+          "rank": 6,
+          "title": "Others (30)",
+          "views": 315142261.9047619,
+          "imdb": ""
+        }
+      ]
+    }
+  }
+}
