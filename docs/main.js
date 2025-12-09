@@ -656,8 +656,7 @@ DATA.forEach(d => {
         const html = `
           <div style="font-weight:600;margin-bottom:2px">${d.franchise}</div>
           <div>Season <b>S${p.s}</b> · Viewing <b>${seasonView}</b></div>
-          <div>Sentiment <b>${label}</b> <span style="opacity:.85">(${sDisp})</span>${sent? (' · Episodes ' + sent.n) : ''}</div>
-          <div>New <b>${d3.format(".0%")(d.latestShare)}</b> · Lib <b>${d3.format(".0%")(d.carryShare)}</b></div>`;
+          <div>Sentiment <b>${label}</b> <span style="opacity:.85">(${sDisp})</span>${sent? (' · Episodes ' + sent.n) : ''}</div>`;
         console.log('Calling showTip with HTML:', html);
         showTip(html, evt);
         // show brief season metadata in the right panel while hovering (if not pinned)
